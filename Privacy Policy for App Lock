@@ -1,0 +1,35 @@
+Last updated: October 2026
+AnkTech ("we", "our", or "us") operates the App Lock mobile application (the "Service"). This page informs you of our policies regarding the collection, use, and disclosure of personal data when you use our Service and the choices you have associated with that data.
+By using the Service, you agree to the collection and use of information in accordance with this policy.
+1. Information Collection and Use
+App Lock is built with a 100% offline, privacy-first architecture. We do not sell, rent, or transmit your personal data to external servers or third parties.
+Types of Data Handled Locally on Your Device:
+ * Passcodes, PINs, and Pattern Credentials: All passcodes and PINs created by you are hashed locally using industry-standard SHA-256 cryptographic algorithms with unique random salts. The raw PINs, passwords, and patterns are never uploaded to any remote server or shared with anyone.
+ * Biometric Data: Biometric authentication (fingerprint recognition) utilizes Android's official BiometricPrompt framework. The application never accesses, stores, or processes raw biometric images or fingerprint signatures; authentication is verified entirely within the secure hardware enclave of your device operating system.
+ * Installed Applications: The app scans your installed applications locally to allow you to select which applications you wish to lock and protect. This list never leaves your device.
+2. Permissions Required & Justification
+To provide real-time locking and security mechanisms, the app requests the following system permissions:
+ * Accessibility Service (BIND_ACCESSIBILITY_SERVICE): Used strictly to detect when a protected application is launched into the foreground so the security lock screen can appear immediately. The Accessibility Service is not used to monitor typing, harvest credentials, inspect private text, or modify settings.
+ * Usage Access (PACKAGE_USAGE_STATS): Serves as an auxiliary engine to identify active foreground tasks and ensure fail-safe locking.
+ * System Alert Window (SYSTEM_ALERT_WINDOW): Required to display the PIN/Pattern authentication screen over locked applications.
+ * Device Administrator (BIND_DEVICE_ADMIN): Optional anti-uninstall feature that protects the App Lock app itself from being bypassed, force-stopped, or uninstalled by unauthorized users.
+ * Query All Packages (QUERY_ALL_PACKAGES): Required on modern Android versions to list installed applications so you can configure app protection rules.
+ * Post Notifications (POST_NOTIFICATIONS): Used to maintain persistent foreground service execution to ensure uninterrupted protection.
+3. Third-Party Services & Advertising
+The application may integrate reputable third-party SDKs for monetization and service maintenance (e.g., Google AdMob or Start.io).
+These third-party service providers may automatically collect non-personally identifiable information, such as:
+ * Device identifiers (e.g., Google Advertising ID / GAID)
+ * Device model, operating system version, and mobile network info
+ * Ad interaction events
+These third-party SDKs handle data according to their respective privacy policies:
+ * Google Play Services & AdMob: https://policies.google.com/privacy
+4. Data Security
+The security of your data is paramount. All configurations, app assignments, and encrypted passcode hashes are stored strictly in private local application storage (Encrypted/Private SharedPreferences) on your local hardware.
+5. Children's Privacy
+Our Service does not address anyone under the age of 13. We do not knowingly collect personally identifiable information from children under 13.
+6. Changes to This Privacy Policy
+We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page with an updated "Last updated" date.
+7. Contact Us
+If you have any questions or concerns regarding this Privacy Policy, please contact us at:
+ * Developer Name: AnkTech
+ * Support Email: diamondfilm01@gmail.com 
