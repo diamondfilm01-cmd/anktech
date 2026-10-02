@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - App Lock</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #2d3748;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 24px;
+            background-color: #f7fafc;
+        }
+        .container {
+            background: #ffffff;
+            padding: 36px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e2e8f0;
+        }
+        h1 {
+            color: #1a202c;
+            border-bottom: 2px solid #edf2f7;
+            padding-bottom: 12px;
+            margin-top: 0;
+        }
+        h2 {
+            color: #2b6cb0;
+            margin-top: 28px;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .date {
+            color: #718096;
+            font-size: 0.9em;
+            margin-bottom: 24px;
+        }
+        code {
+            background-color: #edf2f7;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+        a {
+            color: #3182ce;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Privacy Policy</h1>
+        <p class="date">Last updated: October 2026</p>
+
+        <p>AnkTech ("we", "our", or "us") operates the <strong>App Lock</strong> mobile application (the "Service"). This page informs you of our policies regarding the collection, use, and disclosure of personal data when you use our Service.</p>
+
+        <h2>1. Information Collection and Privacy-First Design</h2>
+        <p><strong>App Lock operates with an offline, privacy-first architecture.</strong> We do not collect, transmit, rent, or sell your personal data to remote servers.</p>
+        <ul>
+            <li><strong>Passcodes, PINs, and Patterns:</strong> All passcodes are hashed locally on your device using cryptographic SHA-256 algorithms with random salt values. Plain text credentials are never saved or sent over any network.</li>
+            <li><strong>Biometric Data:</strong> Biometric authentication (fingerprint) is managed via official Android <code>BiometricPrompt</code> system APIs. We do not access, process, or store raw biometric records.</li>
+            <li><strong>Installed Applications:</strong> The application scans installed packages locally to let you choose apps to protect. This package list remains strictly on your device.</li>
+        </ul>
+
+        <h2>2. Android System Permissions</h2>
+        <p>To provide accurate and real-time app protection, App Lock requires the following permissions:</p>
+        <ul>
+            <li><code>BIND_ACCESSIBILITY_SERVICE</code>: Used strictly to detect when a locked app is brought to the foreground and immediately present the lock screen. It does not monitor input, read personal messages, or extract on-screen content.</li>
+            <li><code>PACKAGE_USAGE_STATS</code>: Used as an auxiliary fail-safe engine to monitor foreground application transitions.</li>
+            <li><code>SYSTEM_ALERT_WINDOW</code>: Required to show the lock screen overlay interface over protected apps.</li>
+            <li><code>BIND_DEVICE_ADMIN</code>: Protects App Lock against unauthorized removal, uninstallation, or force-stopping by third parties without master passcode entry.</li>
+            <li><code>POST_NOTIFICATIONS</code>: Required on newer Android versions to run persistent foreground safety services.</li>
+            <li><code>QUERY_ALL_PACKAGES</code>: Required to display the list of installed applications so you can configure app lock rules.</li>
+        </ul>
+
+        <h2>3. Third-Party Services and Ads</h2>
+        <p>The app may include third-party advertising SDKs (such as Google AdMob or Start.io) to support monetization. These ad providers may collect anonymous, non-personal identifiers (such as Google Advertising ID / GAID, device model, or carrier) in accordance with their respective policies:</p>
+        <p><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy & AdMob Guidelines</a></p>
+
+        <h2>4. Data Storage and Retention</h2>
+        <p>All configurations, locked app selections, and salted credential hashes are stored locally within private application storage (<code>SharedPreferences</code>). No data is synced to external cloud databases.</p>
+
+        <h2>5. Children's Privacy</h2>
+        <p>Our Service is not directed to anyone under the age of 13. We do not knowingly collect personal information from children.</p>
+
+        <h2>6. Policy Updates</h2>
+        <p>We may update our Privacy Policy periodically. Any modifications will be posted directly to this web page with a refreshed revision date.</p>
+
+        <h2>7. Contact Information</h2>
+        <p>If you have any questions or concerns regarding this Privacy Policy, feel free to reach out:</p>
+        <ul>
+            <li><strong>Developer:</strong> AnkTech</li>
+            <li><strong>Email:</strong> diamondfilm01@gmail.com</li>
+        </ul>
+    </div>
+</body>
+</html>
